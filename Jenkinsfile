@@ -1,5 +1,9 @@
 pipeline {
-    agent { docker { image 'jenkins/jenkins' } }
+    agent any
+    tools {
+	maven 'maven'
+	jdk = 'JDK_8'	
+		}
     stages {
         stage('build') {
             steps {
