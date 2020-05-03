@@ -1,14 +1,9 @@
 pipeline {
-    agent any
-    tools {
-	maven 'maven'
-	jdk = 'JDK_8'	
-		}
+    agent { docker { image 'maven:3.3.3' } }
     stages {
         stage('build') {
             steps {
-                sh 'mvn clean install'
-                sh 'mvn spring-boot:run'
+                sh 'mvn --version'
             }
         }
     }
