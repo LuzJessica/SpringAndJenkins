@@ -16,8 +16,12 @@ pipeline {
 				sh 'mvn clean install'
             }
 		}
-	     post {
-        always {
-            archiveArtifacts artifacts: 'helloworld-0.0.1-SNAPSHOT.war', onlyIfSuccessful: true
+	}
+	     post 
+		 {
+        always 
+		{
+		        archiveArtifacts artifacts: 'helloworld-0.0.1-SNAPSHOT.war', onlyIfSuccessful: true
+		}
 	}
 }	
