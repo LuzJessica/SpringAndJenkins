@@ -21,7 +21,7 @@ pipeline {
 		 {
         always 
 		{
-		        archiveArtifacts artifacts: 'helloworld-0.0.1-SNAPSHOT.war', onlyIfSuccessful: true
+		        archiveArtifacts artifacts: './target/helloworld-0.0.1-SNAPSHOT.war', onlyIfSuccessful: true
 		}
 	}
 }	
