@@ -16,12 +16,8 @@ pipeline {
 				sh 'mvn clean install'
             }
 		}
-	    stage('download')
-		{
-			steps 
-			{
-				sh 'echo "artifact file" > helloworld-0.0.1-SNAPSHOT.war'
-			}
-		}
+	     post {
+        always {
+            archiveArtifacts artifacts: 'helloworld-0.0.1-SNAPSHOT.war', onlyIfSuccessful: true
 	}
 }	
