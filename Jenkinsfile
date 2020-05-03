@@ -1,3 +1,13 @@
-mvn clean install
+Jenkinsfile (Declarative Pipeline)
 
-mvn spring-boot:run
+pipeline {
+    agent { docker { image 'maven:3.3.3' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'mvn clean install'
+                sh 'mvn spring-boot:run'
+            }
+        }
+    }
+}
