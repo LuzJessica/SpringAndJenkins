@@ -24,6 +24,7 @@ pipeline {
                 junit 'newman.xml'
             }
 		}
+	}
 	     post 
 		 {
         always 
@@ -32,4 +33,3 @@ pipeline {
 		}
 	}
 }	
-}
