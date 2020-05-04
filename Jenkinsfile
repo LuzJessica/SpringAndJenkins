@@ -5,6 +5,7 @@ pipeline {
 			{
 			image 'maven:3.3.3' 
 			image 'NodeJS 9.10.1'
+			args '-p 3000:3000'
 			}	 
 	}
     stages 
