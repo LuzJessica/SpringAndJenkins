@@ -4,6 +4,7 @@ pipeline {
 		docker 
 			{
 			image 'maven:3.3.3' 
+			image 'NodeJS 9.10.1'
 			}	 
 	}
     stages 
