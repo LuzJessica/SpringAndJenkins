@@ -16,7 +16,14 @@ pipeline {
 				sh 'mvn clean install'
             }
 		}
-	}
+		 stage('test')
+		 {
+            steps {
+                sh 'npm install'
+                sh 'npm run newman-tests'
+                junit 'newman.xml'
+            }
+		}
 	     post 
 		 {
         always 

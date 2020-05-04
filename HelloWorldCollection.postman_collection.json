@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "5c4f2c81-3234-4a9a-91fa-8c1c1cbcb171",
+		"name": "HelloWorldCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "HelloWorld",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c6385f2a-2a07-4789-b701-67f10e1b4746",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081",
+					"host": [
+						"localhost"
+					],
+					"port": "8081"
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
