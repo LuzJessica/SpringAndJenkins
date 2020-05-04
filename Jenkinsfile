@@ -3,10 +3,13 @@ pipeline {
 	{ 
 		docker 
 			{
-			image 'maven:3.3.3' 
-			image 'node:9-alpine'
-			args '-p 3000:3000'
+				image 'maven:3.3.3' 
 			}	 
+			docker
+			{
+				image 'node:9-alpine'
+				args '-p 3000:3000'
+			}
 	}
     stages 
 	{
